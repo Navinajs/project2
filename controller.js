@@ -65,7 +65,7 @@ export const mid = (req, res, next) => {
     }
 }
 
-//createtable
+//function to create table
 export const createTable = async (req, res) => {
     try {
         const createQuery = 'CREATE TABLE Employee(id INTEGER, name VARCHAR(30), work VARCHAR(40))';
@@ -83,7 +83,7 @@ export const createTable = async (req, res) => {
     }
 };
 
-
+//function to insert data in table
 export const insertTable = async (req, res) => {
     try {
         const insertQuery =
@@ -108,7 +108,7 @@ export const insertTable = async (req, res) => {
         res.status(500).json({ code: 500, error: true, err: e.message });
     }
 };
-
+//function to select id
 export const selectId = async (req, res) => {
     try {
         const getID = req.params.id;
@@ -135,7 +135,7 @@ export const selectId = async (req, res) => {
         res.status(500).json({ code: 500, error: true, err: e.message });
     }
 };
-
+//function to delete id
 export const deleteId = async (req, res) => {
     try {
         const getID = req.params.id;
